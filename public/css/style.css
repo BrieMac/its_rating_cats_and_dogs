@@ -1,2 +1,19 @@
+body {
+  text-align: center;
+}
+
 .image_wrapper {
+  height: auto;
+  object-fit: cover;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.radio {
+  padding-top: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
 }

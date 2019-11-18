@@ -1,24 +1,22 @@
-<div class="container">
-  <div class="row"
-    <div class="col-sm image_wrapper">
-      <img class="img-rounded" src ="/images/cat.jpg"/>
-    </div>
-    <div class="col-sm image_wrapper">
-      <img class="img-rounded" src ="/images/dog.jpeg"/>
-    </div>
-  </div>
-</div>
+<table style="height: 100px;">
+  <tbody>
+    <tr>
+      <td class="align-middle">
+        <img class="img-rounded" src="<%= @rando_cat %>"/>
+      </td>
+      <td class="align-middle"><img class="img-rounded" src ="/images/dog.jpeg"/></td>
+    </tr>
+  </tbody>
+</table>
 
 <form action='cast' method='post'>
   <ul class='unstyled'>
     <% Choices.each do |id, text| %>
-      <li>
         <label class='radio'>
           <input type='radio' name='vote' value='<%= id %>' id='vote_<%= id %>' />
           <%= text %>
         </label>
-      </li>
     <% end %>
   </ul>
-  <button type='submit' class='btn btn-primary'>Cast this vote!</button>
+  <button type='submit' class='btn btn-primary'>Vote!</button>
 </form>
