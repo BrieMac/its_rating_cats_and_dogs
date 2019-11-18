@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row"
+    <div class="col-sm image_wrapper">
+      <img class="img-rounded" src ="/images/cat.jpg"/>
+    </div>
+    <div class="col-sm image_wrapper">
+      <img class="img-rounded" src ="/images/dog.jpeg"/>
+    </div>
+  </div>
+</div>
+
+<form action='cast' method='post'>
+  <ul class='unstyled'>
+    <% Choices.each do |id, text| %>
+      <li>
+        <label class='radio'>
+          <input type='radio' name='vote' value='<%= id %>' id='vote_<%= id %>' />
+          <%= text %>
+        </label>
+      </li>
+    <% end %>
+  </ul>
+  <button type='submit' class='btn btn-primary'>Cast this vote!</button>
+</form>
