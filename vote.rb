@@ -1,13 +1,16 @@
 require 'sinatra'
 require 'yaml/store'
+require 'HTTParty'
 
 Choices = {
-  'DOG' => 'Dog',
   'CAT' => 'Cat',
+  'DOG' => 'Dog',
 }
 
 get '/' do
-  @title = 'Which one is cuter?'
+
+  @rando_cat = HTTParty.get('https://aws.random.cat/meow')["file"]
+  @title = 'Who is cuter?'
   erb :index
 end
 
