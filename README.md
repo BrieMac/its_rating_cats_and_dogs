@@ -23,6 +23,10 @@ app.
 ruby vote.rb
 ```
 
+In your browser of choice, visit:
+
+`http://localhost:4567/`
+
 ## References
 
 I used the following tutorials and articles to build this project.
