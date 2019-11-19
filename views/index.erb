@@ -1,13 +1,13 @@
-<table style="height: 100px;">
-  <tbody>
-    <tr>
-      <td class="align-middle">
-        <img class="img-rounded" src="<%= @rando_cat %>"/>
-      </td>
-      <td class="align-middle"><img class="img-rounded" src ="/images/dog.jpeg"/></td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="<%= @rando_cat %>"/>
+    </div>
+    <div class="col-md-4">
+      <div id="rando_dog">
+    </div>
+  </div>
+</div>
 
 <form action='cast' method='post'>
   <ul class='unstyled'>

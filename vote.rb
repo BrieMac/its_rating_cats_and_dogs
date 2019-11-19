@@ -8,7 +8,6 @@ Choices = {
 }
 
 get '/' do
-
   @rando_cat = HTTParty.get('https://aws.random.cat/meow')["file"]
   @title = 'Who is cuter?'
   erb :index

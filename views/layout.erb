@@ -6,8 +6,25 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script type="text/javascript">
+      const Http = new XMLHttpRequest();
+      const url='https://random.dog/woof.json';
+      Http.open("GET", url);
+      Http.send();
+
+      Http.onreadystatechange = function(){
+        if(this.readyState==4 && this.status==200){
+          response = Http.responseText
+          json = JSON.parse(response)
+          rando_dog = json["url"]
+
+          document.getElementById('rando_dog').innerHTML = `<img src ="${rando_dog}" \/>`
+        }
+      }
+    </script>
   </head>
-  <body class='container'>
+  <body>
     <h1><%= @title %></h1>
     <%= yield %>
   </body>
