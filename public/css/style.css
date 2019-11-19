@@ -1,3 +1,29 @@
 body {
-  background-color: blue;
+  margin-top: 5%;
+  text-align: center;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+form {
+  margin-top: 3%;
+}
+
+h1 {
+  margin-bottom: 2%;
+}
+
+.radio {
+  display: inline;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.img-wrapper {
+  height: 250px;
+  align-content: center;
+  margin-bottom: 3%;
 }
