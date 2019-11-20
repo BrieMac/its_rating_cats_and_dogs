@@ -8,6 +8,11 @@ img {
   max-width: 100%;
 }
 
+video {
+  max-height: 100%;
+  max-width: 100%;
+}
+
 form {
   margin-top: 3%;
 }
