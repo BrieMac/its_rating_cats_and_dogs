@@ -15,7 +15,7 @@
   <ul class='unstyled'>
     <% Choices.each do |id, text| %>
         <label class='radio'>
-          <input type='radio' name='vote' value='<%= id %>' id='vote_<%= id %>' />
+          <input type='radio' name='vote' value='<%= id %>' id='vote_<%= id %>' required/>
           <%= text %>
         </label>
     <% end %>
